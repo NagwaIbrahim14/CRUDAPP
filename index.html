@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="w-75 mx-auto my-5">
+        <label for="productNameInput" class="pb-2">productName : </label>
+        <input type="text" class="form-control mb-3" id="productNameInput" >
+
+        <label for="productPriceInput" class="pb-2">productPrice : </label>
+        <input type="text" class="form-control mb-3" id="productPriceInput" >
+
+        <label for="productCategoryInput" class="pb-2">productCategory : </label>
+        <input type="text" class="form-control mb-3" id="productCategoryInput" >
+
+        <label for="productDesInput"  class="pb-2">Desc : </label>
+        <textarea type="text" class="form-control mb-3" id="productDesInput" ></textarea>
+
+        <button class="btn btn-info" onclick="addProduct()">Add Product</button>
+    </div>
+  
+    <div class="w-75 mx-auto py-5">
+
+        <label for="search" class="pb-2">search : </label>
+        <input oninput="searchProduct(this.value)" type="text" class="form-control mb-3 mx-auto  " id="search" >
+
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <td>Index</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Catregory</td>
+                    <td>Desc</td>
+                    <td>Delete</td>
+                    <td>Update</td>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+             
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
